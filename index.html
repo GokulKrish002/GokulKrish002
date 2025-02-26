@@ -12,63 +12,100 @@
 
 <body class="bg-black text-white font-sans">
 
-    <section class="h-[75vh] flex flex-col items-center justify-center text-3xl font-bold text-center md:text-5xl md:h-screen">
+    <section class="h-[100vh] flex flex-col items-center justify-center text-3xl font-bold text-center md:text-5xl md:h-screen">
         <h1 id="hero-text" class="opacity-0">🚀 Hi, I'm <span class="text-green-400">Gokul Krish</span></h1>
-        <p id="hero-subtext" class="opacity-0 text-xl text-gray-300 mt-0 md:text-2xl md:mt-4">Web Developer | Tech Enthusiast</p>
+        <p id="hero-subtext" class="opacity-0 text-xl text-gray-300 pt-[40px] md:text-2xl md:mt-4">Web Developer | Tech
+            Enthusiast</p>
     </section>
 
+    <section id="scroll-container-1" class="h-[75vh] flex items-center overflow-hidden relative">
+        <div id="side-scroll-1"
+            class="flex space-x-32 px-[15%] font-bold absolute left-0 w-[99vw] flex-col justify-center item-center text-center">
+            <span>
+                <span class="text-[24px] md:text-3xl"> Web Development is like a Song !!</span> <br><br>
+                <span class="text-[18px] md:text-2xl">
+                    Think of a song — it's made up of individual notes, but when played together, they create a
+                    masterpiece.
+                    Similarly, a website or application is built by carefully composing small, meaningful pieces of code
+                    that work together to create something functional and engaging.</span>
+            </span>
+        </div>
+    </section>
 
-    <section id="scroll-container" class="h-[50vh] flex items-center bg-black overflow-hidden relative md:h-screen">
-        <div id="side-scroll" class="whitespace-nowrap text-3xl font-bold absolute left-[50px] md:left-[250px] md:text-7xl">
-            Hey this is the side content → More text here → Keep scrolling → It's still going →
+    <section id="scroll-container-2" class="h-[75vh] flex items-center overflow-hidden relative">
+        <div id="side-scroll-2"
+            class="flex space-x-32 text-[24px] px-[15%] font-bold absolute right-0 w-[99vw] flex justify-center text-center md:text-4xl">
+            💻 2+ Years Crafting Scalable Web Apps at <br> Q Brainstorm Software
+        </div>
+    </section>
+
+    <section id="scroll-container-3" class="h-[75vh] flex items-center overflow-hidden relative">
+        <div id="side-scroll-3"
+            class="flex space-x-32 text-[24px] px-[15%] font-bold absolute left-0 w-[99vw] flex justify-center text-center md:text-4xl">
+            🎓 Kashiv Infotech Internship: From Intern to Innovator in 6 Months
+        </div>
+    </section>
+
+    <section id="scroll-container-4" class="h-[75vh] flex items-center overflow-hidden relative">
+        <div id="side-scroll-4"
+            class="flex space-x-32 text-[24px] px-[15%] font-bold absolute right-0 w-[99vw] flex justify-center text-center md:text-4xl">
+            🛠️ Turning Ideas into Reality with HTML, CSS, JavaScript & PHP
+        </div>
+    </section>
+
+    <section id="scroll-container-5" class="h-[75vh] flex items-center overflow-hidden relative">
+        <div id="side-scroll-5"
+            class="flex space-x-32 text-[24px] px-[15%] font-bold absolute left-0 w-[99vw] flex justify-center text-center md:text-4xl">
+            ⚙️ Mastering Frameworks: React, Angular, CodeIgniter & More
+        </div>
+    </section>
+
+    <section id="scroll-container-6" class="h-[75vh] flex items-center overflow-hidden relative">
+        <div id="side-scroll-6"
+            class="flex space-x-32 text-[24px] px-[15%] font-bold absolute right-0 w-[99vw] flex justify-center text-center md:text-4xl">
+            🎨 Designing Seamless UIs with Bootstrap, Tailwind & jQuery
         </div>
     </section>
 
 
-
-
-    <section class="py-20 bg-black text-center">
-        <h2 class="text-4xl font-bold mb-8">💡 Skills</h2>
-
-        <div class="w-3/4 mx-auto space-y-6">
-            <div class="text-left">
-                <p class="text-lg">JavaScript</p>
-                <div class="bg-gray-700 h-2 rounded">
-                    <div class="bg-green-400 h-2 rounded w-0 skill-bar" data-skill="90"></div>
-                </div>
+    <section class="py-20 text-center md:h-screen" id="projects_container">
+        <h2 class="text-4xl font-bold mb-[100px]">🚀 Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-3/4 mx-auto">
+            <div class="p-6 bg-gray-700 rounded-lg hover:scale-105 transition-transform mt-[20px]" id="project_1">
+                <h3 class="text-xl font-semibold">CMS Platform</h3>
+                <p class="text-gray-300">Built a scalable CMS for managing content efficiently.</p>
             </div>
-            <div class="text-left">
-                <p class="text-lg">React.js</p>
-                <div class="bg-gray-700 h-2 rounded">
-                    <div class="bg-blue-400 h-2 rounded w-0 skill-bar" data-skill="85"></div>
-                </div>
+            <div class="p-6 bg-gray-700 rounded-lg hover:scale-105 transition-transform mt-[20px]" id="project_2">
+                <h3 class="text-xl font-semibold">Fleet Management System</h3>
+                <p class="text-gray-300">Built a custom FMS with trip analysis and invoice generation and more !</p>
             </div>
-            <div class="text-left">
-                <p class="text-lg">Node.js</p>
-                <div class="bg-gray-700 h-2 rounded">
-                    <div class="bg-yellow-400 h-2 rounded w-0 skill-bar" data-skill="80"></div>
-                </div>
+            <div class="p-6 bg-gray-700 rounded-lg hover:scale-105 transition-transform mt-[20px]" id="project_3">
+                <h3 class="text-xl font-semibold">HRMS Software</h3>
+                <p class="text-gray-300">Developed an HR platform with payroll & leave tracking and more !</p>
             </div>
-        </div>
-    </section>
-    <section class="py-20 bg-black text-center">
-        <h2 class="text-4xl font-bold mb-8">📌 Work Experience</h2>
-        <div class="w-3/4 mx-auto space-y-8">
-            <div class="timeline-item opacity-0">
-                <h3 class="text-xl font-semibold">🚀 Software Engineer - Amazon</h3>
-                <p class="text-gray-400">2023 - Present</p>
-                <p>Worked on scalable backend services using Node.js & AWS.</p>
+            <div class="p-6 bg-gray-700 rounded-lg hover:scale-105 transition-transform mt-[20px]" id="project_4">
+                <h3 class="text-xl font-semibold">ERP Software</h3>
+                <p class="text-gray-300">Worked in Building Scalable ERP Systems !</p>
             </div>
-            <div class="timeline-item opacity-0">
-                <h3 class="text-xl font-semibold">💻 Frontend Developer - XYZ</h3>
-                <p class="text-gray-400">2021 - 2023</p>
-                <p>Built interactive UIs with React & GSAP animations.</p>
+            <div class="p-6 bg-gray-700 rounded-lg hover:scale-105 transition-transform mt-[20px]" id="project_5">
+                <h3 class="text-xl font-semibold">CRM</h3>
+                <p class="text-gray-300">📈 Optimizing Customer Relationships with CRM Solutions</p>
             </div>
         </div>
     </section>
 
-    <section class="h-screen flex items-center justify-center text-3xl bg-black">
-        let change things tomorrow !
+    <div class="fixed top-[50vh] left-[-25%] w-[150vw] h-[150vh] opacity-100 bg-[linear-gradient(transparent,transparent,#000000)] hidden md:block"></div>
+
+    <section class="py-20 text-center h-screen flex justify-center items-center">
+        <div>
+            <h2 class="text-4xl font-bold mb-8">📬 Let's Connect</h2>
+            <p class="text-xl">Want to build something cool? Let's talk!</p>
+            <div class="mt-4 flex justify-center space-x-6 text-2xl">
+                <a href="#" class="hover:text-green-400">🔗 LinkedIn</a>
+                <a href="#" class="hover:text-green-400">💻 GitHub</a>
+                <a href="mailto:youremail@example.com" class="hover:text-green-400">✉️ Email</a>
+            </div>
+        </div>
     </section>
 
     <div id="loading-screen"
@@ -77,108 +114,33 @@
     </div>
 
 
-
     <script>
         gsap.registerPlugin(ScrollTrigger);
+        gsap.to("#hero-text", { opacity: 1, scale: 1.2, duration: 1.5, ease: "power2.out" });
+        gsap.to("#hero-subtext", { opacity: 1, y: -20, duration: 1.5, delay: 1, ease: "power2.out" });
+        const scroll_sections = [
+            { id: "#side-scroll-1", x: "-100%" }, // Right to Left
+            { id: "#side-scroll-2", x: "100%" },  // Left to Right
+            { id: "#side-scroll-3", x: "-100%" }, // Right to Left
+            { id: "#side-scroll-4", x: "100%" },   // Left to Right
+            { id: "#side-scroll-5", x: "-100%" },   // Left to Right
+            { id: "#side-scroll-6", x: "100%" },   // Left to Right
+        ];
 
-        gsap.to(".opacity-0", {
-            opacity: 1,
-            y: -50,
-            duration: 1.5,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: ".opacity-0",
-                start: "top 80%",
-                toggleActions: "play none none none"
-            }
+        scroll_sections.forEach((section, index) => {
+            gsap.to(section.id, {
+                x: section.x,
+                ease: "power1.inOut",
+                scrollTrigger: {
+                    trigger: `#scroll-container-${index + 1}`,
+                    start: "top top",
+                    end: "+=80%",
+                    scrub: true,
+                    pin: true
+                }
+            });
         });
 
-        gsap.to(".h-screen:first-child", {
-            yPercent: -20,
-            scrollTrigger: {
-                trigger: ".h-screen:first-child",
-                start: "top top",
-                scrub: true
-            }
-        });
-
-
-        gsap.to("#hero-text", {
-            opacity: 1,
-            scale: 1.2,
-            duration: 1.5,
-            ease: "power2.out"
-        });
-
-        gsap.to("#hero-subtext", {
-            opacity: 1,
-            y: -20,
-            duration: 1.5,
-            delay: 0.5,
-            ease: "power2.out"
-        });
-
-        gsap.to(".skill-bar", {
-            width: (i, el) => el.getAttribute("data-skill") + "%",
-            duration: 1.5,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: ".skill-bar",
-                start: "top 80%",
-                toggleActions: "play none none none"
-            }
-        });
-
-        gsap.to(".timeline-item", {
-            opacity: 1,
-            y: -20,
-            duration: 1.5,
-            stagger: 0.3,
-            scrollTrigger: {
-                trigger: ".timeline-item",
-                start: "top 80%",
-                toggleActions: "play none none none"
-            }
-        });
-    </script>
-    <script>
-        gsap.to("#side-scroll", {
-            x: "-100%",
-            ease: "power1.inOut",
-            scrollTrigger: {
-                trigger: "#scroll-container",
-                start: "top top",
-                end: "+=200%",
-                scrub: true,
-                pin: true
-            }
-        });
-
-        gsap.from("#side-scroll", {
-            opacity: 0,
-            scale: 0.8,
-            duration: 1.5,
-            scrollTrigger: {
-                trigger: "#scroll-container",
-                start: "top 80%",
-                toggleActions: "play none none reverse"
-            }
-        });
-
-        gsap.to("#scroll-container", {
-            backgroundPositionX: "-20%",
-            ease: "power1.inOut",
-            scrollTrigger: {
-                trigger: "#scroll-container",
-                start: "top top",
-                end: "+=100%",
-                scrub: 0.5
-            }
-        });
-
-    </script>
-
-    <script>
         gsap.to("#loading-text", {
             opacity: 0,
             repeat: -1,
@@ -195,6 +157,23 @@
                 onComplete: () => document.getElementById("loading-screen").remove()
             });
         });
+
+        const projects = ["#project_1", "#project_2", "#project_3", "#project_4", "#project_5"];
+
+        gsap.fromTo(
+            projects,
+            { opacity: 0 },
+            {
+                opacity: 1,
+                duration: 2,
+                ease: "power2.out",
+                stagger: 0.3,
+                scrollTrigger: {
+                    trigger: "#projects_container",
+                },
+            }
+        );
+
 
     </script>
 </body>
