@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gokul Krish</title>
+    <title>Gokul's Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -15,10 +15,12 @@
 <body class="bg-black text-white font-sans">
 
     <section
-        class="h-[100vh] flex flex-col items-center justify-center text-3xl font-bold text-center md:text-5xl md:h-screen">
-        <h1 id="hero-text" class="opacity-0">🚀 Hi, I'm <span class="text-green-400">Gokul Krish</span></h1>
+        class="h-[100vh] flex flex-col items-center justify-center text-3xl font-bold text-center md:text-5xl md:h-screen relative">
+        <h1 id="hero-text" class="opacity-0">🚀 Hi, I'm <span class="text-green-400">Gokul B</span></h1>
         <p id="hero-subtext" class="opacity-0 text-xl text-gray-300 pt-[40px] md:text-2xl md:mt-4">Web Developer | Tech
             Enthusiast</p>
+
+        <p class="absolute bottom-[20px] left-0 w-full text-center text-[20px]" id="scroll_down">Scroll Down</p>
     </section>
 
     <section id="scroll-container-1" class="h-[75vh] flex items-center overflow-hidden relative">
@@ -46,8 +48,8 @@
     <section id="scroll-container-3" class="h-[75vh] flex items-center overflow-hidden relative">
         <div id="side-scroll-3"
             class="text-[24px] px-[15%] font-bold absolute left-0 w-[100vw] text-center md:text-4xl">
-            <p>🎓 From Intern to Innovator in 6 Months at</p>
-            <p class="text-green-400">Kashiv Infotech Internship</p>
+            <p>🎓 Gained Hands-on Experience in 6 Months at</p>
+            <p class="text-green-400">Kashiv Infotech</p>
         </div>
     </section>
 
@@ -123,14 +125,15 @@
     <section id="featured-website" class="py-20 text-center">
         <h2 class="text-4xl font-bold mb-12">🌐 Featured Website</h2>
 
-        <div class="w-3/4 mx-auto">
+        <div class="w-3/4 mx-auto" id="featured_image">
             <img src="lgtindia.jpg" alt="Website Preview" class="rounded-lg shadow-lg">
         </div>
 
         <div class="mt-6 text-gray-300">
-            <h3 class="text-2xl font-semibold">Corporate Business Website</h3>
+            <h3 class="text-2xl font-semibold">Featured Website - LGTIndiajournez</h3>
             <p class="mt-4 px-12">
-                A vibrant and user-friendly tour company website, designed to showcase travel packages, destinations, and services with a modern UI. Built to inspire travelers and enhance bookings effortlessly.
+                A vibrant and user-friendly tour company website, designed to showcase travel packages, destinations,
+                and services with a modern UI. Built to inspire travelers and enhance bookings effortlessly.
             </p>
 
             <div class="mt-8">
@@ -204,6 +207,7 @@
             gsap.registerPlugin(ScrollTrigger);
             gsap.to("#hero-text", { opacity: 1, scale: 1.2, duration: 1.5, ease: "power2.out" });
             gsap.to("#hero-subtext", { opacity: 1, y: -20, duration: 1.5, delay: 1, ease: "power2.out" });
+            const projects = ["#project_1", "#project_2", "#project_3", "#project_4", "#project_5"];
             const scroll_sections = [
                 { id: "#side-scroll-1", x: "-100%" },
                 { id: "#side-scroll-2", x: "100%" },
@@ -213,10 +217,27 @@
                 { id: "#side-scroll-6", x: "100%" },
             ];
 
+            gsap.fromTo(
+                projects,
+                { opacity: 0.7, filter: "blur(2px)" },
+                {
+                    opacity: 1,
+                    duration: 3,
+                    filter: "blur(0px)",
+                    ease: "power2.out",
+                    stagger: 0.3,
+                    scrollTrigger: {
+                        trigger: "#projects_container",
+                    },
+                }
+            );
+
             scroll_sections.forEach((section, index) => {
                 gsap.to(section.id, {
                     x: section.x,
                     ease: "power1.inOut",
+                    filter: "blur(2px)",
+                    opacity: 0.8,
                     scrollTrigger: {
                         trigger: `#scroll-container-${index + 1}`,
                         start: "top top",
@@ -227,30 +248,32 @@
                 });
             });
 
-            gsap.to("#loading-text", {
-                opacity: 0,
-                repeat: -1,
-                yoyo: true,
-                duration: 1.2,
-                ease: "power1.inOut"
-            });
-
-            const projects = ["#project_1", "#project_2", "#project_3", "#project_4", "#project_5"];
-
-            gsap.fromTo(
-                projects,
-                { opacity: 0 },
+            gsap.fromTo("#featured_image",
+                { opacity: 0.2, filter: "blur(5px)" },
                 {
                     opacity: 1,
                     duration: 2,
+                    filter: "blur(0px)",
                     ease: "power2.out",
-                    stagger: 0.3,
+                    stagger: 2,
+                    delay: 2,
                     scrollTrigger: {
                         trigger: "#projects_container",
                     },
                 }
             );
+
+            gsap.to(["#scroll_down", "#loading-text"], {
+                opacity: 0,
+                duration: 1.5,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.inOut"
+            });
+
+
         });
+
 
         window.addEventListener("load", () => {
             gsap.to("#loading-screen", {
